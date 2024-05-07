@@ -1,0 +1,279 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.main {
+    height: 100vh;
+    background-color: rgba(147, 147, 147, 0.256);
+    padding-top: 100px;
+}
+
+.main .signup {
+    width: 70%;
+    height: 75vh;
+    margin: auto;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    border-radius: 7px;
+}
+
+.main .signup .left {
+    margin-left: 60px;
+}
+
+.main .signup .image img {
+    width: 250px;
+}
+
+.main .signup h2 {
+    color: white;
+    display: block;
+    margin-top: 10px;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main .signup .left .info {
+    color: rgb(222, 220, 220);
+}
+
+.main .signup .left .info i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.main .signup .left>i {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.main .signup .formCard {
+    width: 400px;
+    min-height: 480px;
+    left: 850px;
+    top: 80px;
+    /* background-color: rgb(255, 255, 255); */
+    position: absolute;
+    border-radius: 7px;
+    padding-top: 40px;
+}
+
+.main .signup .formCard {
+    font-size: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.139);
+    background-color: rgb(231, 230, 230);
+}
+
+.main .signup .formCard input {
+    background-color: transparent;
+    border: 0px solid gray;
+    border-bottom: 1px solid rgb(81, 81, 81);
+    width: 80%;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.main .signup .formCard .row {
+    display: flex;
+}
+
+.main .signup .formCard .row .FName {
+    width: 37%;
+}
+
+.main .signup .formCard .row .LName {
+    width: 37%;
+}
+
+.main .signup .formCard .genderRow {
+    display: flex;
+    margin: 10px;
+    margin-left: 10px;
+}
+
+.main .signup .formCard .genderRow input {
+    width: 10%;
+    margin: 3px;
+}
+
+
+
+.main .signup .formCard .submit {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+
+}
+
+.main .signup .formCard .submit i {
+    margin-left: 30px;
+    font-size: 30px;
+    /* top: 342px; */
+
+}
+
+.main .signup .formCard .submit input {
+    border: 0px;
+}
+
+.main .signup .formCard .submit button {
+    width: 180px;
+    border: 0px;
+    background-color: rgb(41, 41, 41);
+
+    border-radius: 5px 0px 0px 5px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    font-weight: 700;
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+}
+
+.main .signup .formCard .submit button:disabled {
+    background-color: rgb(105, 104, 104);
+    color: #c6c4c4;
+}
+
+.main .signup .formCard .submit .Already {
+    margin-top: 10px;
+    position: absolute;
+    /* top: 370px; */
+    left: 20px;
+    font-size: 12px;
+    color: rgb(220, 12, 12);
+}
+
+.main .signup .formCard .submit .Already a {
+    font-size: 13px;
+    color: rgb(69, 181, 215);
+    font-weight: 500;
+}
+
+.alert {
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 80%;
+    height: 20px;
+    color: rgb(236, 120, 120);
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+
+
+
+@media(max-width:950px) {
+    /* 
+    .main .signup {
+        width: 80%;
+        height: 80vh;
+    }
+
+    .main .signup .left {
+        width: 40%;
+    }
+
+    .main .signup .image {
+        width: 100%;
+        margin-top: 125px;
+        margin-left: 10px;
+    }
+
+    .main .signup .image img {
+        width: 260px;
+    }
+
+    .main .signup .right {
+        width: 60%;
+
+    }
+
+    .main .signup .right .formCard {
+        width: 90%;
+        margin: -20px auto 0px auto;
+
+    } */
+}
+
+
+@media(max-width:750px) {
+    /* 
+    .main .signup {
+        width: 90%;
+        height: 82vh;
+    }
+
+    .main .signup .left {
+        width: 30%;
+    }
+
+    .main .signup .image {
+        width: 100%;
+        margin-top: 183px;
+        margin-left: 0px;
+    }
+
+    .main .signup .image img {
+        width: 200px;
+    }
+
+    .main .signup .right {
+        width: 65%;
+
+    }
+
+    .main .signup .right .formCard {
+        width: 90%;
+        margin: -20px auto 0px auto;
+
+    } */
+
+}
+
+
+
+@media(max-width:600px) {
+
+    /* .main .signup {
+        width: 90%;
+        height: 80vh;
+    }
+
+    .main .signup .left {
+        width: 0px;
+        display: none;
+    }
+
+    .main .signup .image {
+        display: none;
+        width: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .main .signup .image img {
+        width: 0px;
+        display: none;
+    }
+
+    .main .signup .right {
+        width: 95%;
+
+    }
+
+    .main .signup .right .formCard {
+        width: 95%;
+        margin: -20px auto 0px auto;
+
+    } */
+
+
+
+}

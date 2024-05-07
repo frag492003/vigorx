@@ -1,0 +1,100 @@
+<app-header></app-header>
+
+
+<div class="d-flex">
+
+    <div class="sidebar pl-3 pt-4">
+        <ul>
+            <li>
+                <a routerLink="/admin">
+                    <div>Home</div>
+                </a>
+            </li>
+            
+            <li>
+                <a routerLink="/addProduct">
+                    <div>Add Product</div>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/updateProduct">
+                    <div>Update Product</div>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/allOrders">
+                    <div>Show Orders</div>
+                </a>
+            </li>
+            
+        </ul>
+
+    </div>
+    <!-- ----------End sidebar---------- -->
+
+    <!-- -------------main-------------- -->
+    <div class="main">
+        <div class="cards">
+            <div class="UpdateCard">
+                <div class="card-content">
+                    <h3 class="card-title">Add Product</h3>
+
+                    <form  [formGroup]="addForm">
+                        
+                        <div>
+
+                            <input type="text"  placeholder="Enter product title" required formControlName="title">
+                        </div>
+                        <div *ngIf="addForm.controls.title.touched && addForm.controls.title.invalid"
+                        class="alert alert-danger">
+                        you must enter valid title
+                    </div>
+                        <div>
+                            <input type="text" placeholder="Enter product description" required formControlName="description">
+                        </div>
+                        <div *ngIf="addForm.controls. description.touched && addForm.controls. description.invalid"
+                        class="alert alert-danger">
+                        you must enter valid  description
+                    </div>
+                      
+                        <div>
+                            <input type="text" placeholder="Enter product category" required formControlName="Category">
+                        </div>
+                        <div *ngIf="addForm.controls.Category.touched && addForm.controls. Category.invalid"
+                        class="alert alert-danger">
+                        you must enter valid category
+                    </div>
+                        
+                        <div>
+                            <input type="text" placeholder="Enter product price" required formControlName="price">
+                        </div>
+                        <div *ngIf="addForm.controls.price.touched && addForm.controls. price.invalid"
+                        class="alert alert-danger">
+                        you must enter price more 1
+                    </div>
+                        
+                        
+                        <div>
+                            <input type="text" placeholder="Enter product image" required formControlName="image">
+                        </div>
+                        <div *ngIf="addForm.controls.image.touched && addForm.controls. image.invalid"
+                        class="alert alert-danger">
+                        you must enter valid Url
+                    </div>
+                        
+                        <div class="buttons">
+                            <button type="submit" *ngIf="addForm.valid" id="submit" (click)="add()">Submit</button>
+                            <button type="reset" id="reset">Reset</button>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <app-footer></app-footer> -->

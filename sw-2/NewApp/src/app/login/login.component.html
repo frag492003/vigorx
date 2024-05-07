@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="main">
+    <div class="login">
+        <div class="left">
+            <div class="image">
+                <!-- need to change the image -->
+                <!-- <img src="../../assets/img/13184510_5167711.jpg" alt=""> -->
+            </div>
+            <form class="formCard" [formGroup]="loginForm">
+                <h4 style="margin:10px; color: rgb(102, 101, 101);font-size: 30px;">Login</h4>
+                <div class="formgroup">
+                    <input type="text" placeholder="E-mail" required formControlName="email">
+                    <div *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid"
+                        class="alert alert-danger">
+                        you must enter valid email
+                    </div>
+                    <input type="text" placeholder="Password" required formControlName="password">
+                    <div *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid"
+                        class="alert alert-danger">
+                        you must enter password contains more than 8 characters
+                    </div>
+                </div>
+
+                <div *ngIf="loginForm.valid then valid else invalid" class="d-grid">
+                </div>
+                <ng-template #invalid>
+                    <div class="submit">
+                        <button disabled>Login</button>
+                    </div>
+                </ng-template>
+                <ng-template #valid>
+                    <div class="submit">
+                        <button (click)="Login()">Login</button>
+                    </div>
+                </ng-template>
+            </form>
+        </div>
+    </div>
+</div>

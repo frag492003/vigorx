@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+
+<div class="d-flex">
+
+    <div class="sidebar pl-3 pt-4">
+        <ul>
+            <li>
+                <a routerLink="/admin">
+                    <div>Home</div>
+                </a>
+            </li>
+            
+            <li>
+                <a routerLink="/addProduct">
+                    <div>Add Product</div>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/updateProduct">
+                    <div>Update Product</div>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/allOrders">
+                    <div>Show Orders</div>
+                </a>
+            </li>
+            
+        </ul>
+
+    </div>
+    <!-- ----------End sidebar---------- -->
+
+    <!-- -------------main-------------- -->
+
+    <div class="main">
+        <div class="cards">
+            <div class="ListCard">
+                <div class="card-content">
+                    <h3>All Orders</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                
+                                <th>product Id</th>
+                                <th>date</th>
+                                <th>deliever date</th>
+                                
+                              
+                                <th colspan="2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let order of AllOrders">
+                                <th>{{order.id}}</th>
+                              
+                                <td>{{order.productId}}</td>
+                                <td>{{order.date}}</td>
+                                <td>{{order.delieverdate}}</td>
+                                
+
+                               
+
+                                <td>
+                                    <a class="edit-link btn btn-warning" routerLink="/show">send order</a>
+                                    <a class="delete-link btn btn-danger" (click)=" delete(order.id)">Delete</a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!------------- End Table---------- -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<!-- <app-footer></app-footer> -->

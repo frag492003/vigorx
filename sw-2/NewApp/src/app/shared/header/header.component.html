@@ -1,0 +1,48 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a routerLink="/" class="logo">
+                        <img src="assets/images/logo.png">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a routerLink="/" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a routerLink="/allProduct/all">Products</a></li>
+                        <!-- <li class="scroll-to-section"><a routerLink="/allProduct/women">Women's</a></li>
+                        <li class="scroll-to-section"><a routerLink="/allProduct/kids">Kid's</a></li> -->
+
+                        <li class="scroll-to-section"><a routerLink="/aboutus">About Us</a></li>
+                        <li class="scroll-to-section"><a routerLink="/contactus">Contact Us</a></li>
+                        <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+
+                        <li *ngIf="role == null"><a class="getstarted scrollto" routerLink="/login"><i class="fa-regular fa-user"></i>Login</a></li>
+
+        <li *ngIf="role == null"><a class="getstarted scrollto" routerLink="/register"><i class="fa-regular fa-user"></i>Register</a></li>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+        <a *ngIf="role != null"  class="userName">
+          <img src="../../../assets/img/images.png" alt="" class="userImage">
+        <li></li>
+        </a>
+        
+      
+        
+         <li *ngIf="role != null"><a class="getstarted" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i>Log out</a></li>
+
+         
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->

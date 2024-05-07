@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="main">
+    <div class="signup">
+        <div class="left">
+            <div class="image">
+                <!-- need to change the image -->
+                <!-- <img src="assets/img/undraw_agreement_re_d4dv.svg" alt=""> -->
+            </div>
+            <form class="formCard" [formGroup]="registerForm">
+                <h4 style="margin:10px; color: rgb(102, 101, 101);font-size: 30px;">SignUp</h4>
+                <div class="formgroup">
+                    <div class="row">
+                        <input type="text" required formControlName="firstName" class="FName" placeholder="FName">
+
+                        <input type="text" required formControlName="lastName" class="LName" placeholder="LName">
+                        <div *ngIf="registerForm.controls.firstName.touched && registerForm.controls.firstName.invalid || registerForm.controls.lastName.touched && registerForm.controls.lastName.invalid"
+                            class="alert alert-danger">
+                            you must enter valid name
+                        </div>
+                    </div>
+
+                    <input type="text" required formControlName="email" placeholder="E-mail">
+                    <div *ngIf="registerForm.controls.email.touched && registerForm.controls.email.invalid"
+                        class="alert alert-danger">
+                        you must enter valid email
+                    </div>
+
+                    <input type="password" required formControlName="password" placeholder="Password">
+                    <div *ngIf="registerForm.controls.password.touched && registerForm.controls.password.invalid"
+                        class="alert alert-danger">
+                        you must enter valid password
+                    </div>
+                    <input type="text" required formControlName="phone" placeholder="phone">
+                    <div *ngIf="registerForm.controls.phone.touched && registerForm.controls.phone.invalid"
+                        class="alert alert-danger">
+                        you must enter valid phone
+                    </div>
+                    <input type="text" required formControlName="address" placeholder="address">
+                    <div *ngIf="registerForm.controls.address.touched && registerForm.controls.address.invalid"
+                        class="alert alert-danger">
+                        you must enter valid address
+                    </div>
+
+
+                    
+                    
+                </div>
+
+
+
+
+                <input type="text" value="customer" placeholder="role" required formControlName="role">
+
+
+
+
+                <div *ngIf="registerForm.valid then valid else invalid" class="d-grid">
+
+                </div>
+
+                <ng-template #valid>
+                    <div class="submit">
+                        <button (click)="createUser()">SignUp</button>
+                        
+                    </div>
+                </ng-template>
+                <ng-template #invalid>
+                    <div class="submit">
+                        <button disabled>SignUp</button>
+                        
+                    </div>
+                </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div *ngIf="registerForm.invalid" class="d-grid">
+
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
